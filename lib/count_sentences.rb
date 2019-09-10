@@ -19,6 +19,15 @@ class String
     if sentence? || question? || exclamation?
       i = (self.split(".").count) + (self.split("?").count) + (self.split("!").count)
     end
+    if sentence?
+      i -= 1
+    end
+    if question?
+      i -= 1
+    end
+    if exclamation?
+      i -= 1
+    end
     i
   end
 end
