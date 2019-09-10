@@ -21,7 +21,7 @@ class String
       self.split(".").each do |array|
         self.split("?").each do |array2|
           binding.pry
-          i += self.split("!").count
+          i += array2.split("!").count
         end
       end
       #i = (self.split(".").count - 1) + (self.split("?").count - 1) + (self.split("!").count - 1)
