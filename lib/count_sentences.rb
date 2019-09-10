@@ -1,8 +1,7 @@
 require 'pry'
 
 class String
-  attr_accessor :count
-  
+   
   def sentence?
     self.end_with?(".")
   end
@@ -16,9 +15,12 @@ class String
   end
 
   def count_sentences
-    if exclamation? || question? || sentence?
-      @count += 1
+    count = 0
+    self.each do |string|
+      if exclamation? || question? || sentence?
+        count += 1
+      end
     end
-    @count
+    count
   end
 end
