@@ -15,10 +15,10 @@ class String
   end
 
   def count_sentences
+    i = 0
     if sentence? || question? || exclamation?
-      (self.split(".").count - 1) + (self.split("?").count - 1) + (self.split("!").count)
-    else
-      0
+      i = (self.split(".").count) + (self.split("?").count) + (self.split("!").count)
     end
+    i
   end
 end
