@@ -19,7 +19,7 @@ class String
     
     if sentence? || question? || exclamation?
       self.split(".").each do |array|
-        self.split("?").each do |array|
+        self.split("?").each do |array2|
           binding.pry
           i += self.split("!").count
         end
