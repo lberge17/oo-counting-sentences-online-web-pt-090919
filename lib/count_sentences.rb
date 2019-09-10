@@ -1,7 +1,8 @@
 require 'pry'
 
 class String
-
+  COUNT = 0
+  
   def sentence?
     self.end_with?(".")
   end
@@ -16,7 +17,7 @@ class String
 
   def count_sentences
     if exclamation? || question? || sentence?
-      @count += 1
+      COUNT += 1
     end
     COUNT
   end
