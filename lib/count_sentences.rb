@@ -18,7 +18,12 @@ class String
     i = 0
     
     if sentence? || question? || exclamation?
-      i = (self.split(".").count - 1) + (self.split("?").count - 1) + (self.split("!").count - 1)
+      self.split(".").each do |array|
+        self.split("?").each do |array|
+          i += self.split("!").count
+        end
+      end
+      #i = (self.split(".").count - 1) + (self.split("?").count - 1) + (self.split("!").count - 1)
     end
     i
   end
