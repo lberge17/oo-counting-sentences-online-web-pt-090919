@@ -18,7 +18,7 @@ class String
     i = 0
     
     if sentence? || question? || exclamation?
-      i = (self.split(".").count) + (self.split("?").count) + (self.split("!").count) - 3
+      i = (self.split(".").count - 1) + (self.split("?").count - 1) + (self.split("!").count - 1)
     end
     i
   end
