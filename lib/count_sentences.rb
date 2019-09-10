@@ -1,7 +1,7 @@
 require 'pry'
 
 class String
-  attr_accessible :count
+  attr_accessor :count
   
   def sentence?
     self.end_with?(".")
