@@ -16,7 +16,7 @@ class String
 
   def count_sentences
     if sentence? || question? || exclamation?
-      (self.split(".").count - 1) + (self.split("?").count - 1) + (self.split("!").count - 1)
+      (self.split(".").count - 1) + (self.split("?").count - 1) + (self.split("!").count)
     else
       0
     end
